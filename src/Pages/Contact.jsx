@@ -261,7 +261,7 @@ import wave2 from "../assets/wave2.png";
 import { Footer } from "./Footer";
 
 // Initialize EmailJS with your public key
-emailjs.init("id07ODxpiVXsAo1jF");
+emailjs.init("tKiktR5ozvHfwV9rY");
 
 const Contact = () => {
   const formRef = useRef();
@@ -294,9 +294,9 @@ const Contact = () => {
     try {
       // Prepare template parameters
       const templateParams = {
-        // to_email: "YOUR_RECIPIENT_EMAIL@example.com", // Where you want to receive emails
-        to_email: "grltech@gmail.com", // Where you want to receive emails
+        to_email: "gyaankool.database@gmail.com", // Where you want to receive emails
         from_name: `${formData.firstName} ${formData.lastName}`,
+        name: `${formData.firstName} ${formData.lastName}`, // For template's From Name field
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
@@ -305,8 +305,8 @@ const Contact = () => {
 
       // Send email using EmailJS
       const response = await emailjs.send(
-        "service_q3fcp78", // Your EmailJS service ID
-        "template_7d0k23b", // Your EmailJS template ID
+        "service_c2vs3nk", // Your EmailJS service ID
+        "template_csu44db", // Your EmailJS template ID
         templateParams
       );
 
@@ -324,22 +324,23 @@ const Contact = () => {
           phone: "",
           message: "",
         });
-        // Hide notification after 5 seconds
+        // Hide notification after 2.5 seconds
         setTimeout(() => {
           setNotification({ show: false, type: "", message: "" });
-        }, 5000);
+        }, 2500);
       }
     } catch (error) {
       console.error("EmailJS Error:", error);
+      console.error("Error details:", error.text || error.message || error);
       setNotification({
         show: true,
         type: "error",
-        message: "Failed to send message. Please try again later.",
+        message: `Failed to send message: ${error.text || error.message || "Please check console for details"}`,
       });
-      // Hide notification after 5 seconds
+      // Hide notification after 3 seconds for error messages
       setTimeout(() => {
         setNotification({ show: false, type: "", message: "" });
-      }, 5000);
+      }, 3000);
     } finally {
       setLoading(false);
     }
@@ -347,6 +348,19 @@ const Contact = () => {
 
   return (
     <div className="font-sans text-gray-800">
+      {/* Notification Toast Popup */}
+      {notification.show && (
+        <div
+          className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-[100] px-6 py-4 rounded-lg shadow-2xl text-white text-center font-medium min-w-[300px] max-w-[90%] sm:max-w-md transition-all duration-300 ease-in-out ${
+            notification.type === "success"
+              ? "bg-green-500"
+              : "bg-red-500"
+          }`}
+        >
+          {notification.message}
+        </div>
+      )}
+
       {/* Header */}
       <Navbar />
       <div className="">
@@ -406,23 +420,10 @@ const Contact = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="max-w-7xl w-full px-4 sm:px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 md:gap-20 text-white">
             {/* Left: Form */}
-            <div className="pt-6 md:pt-0">
+            <div className="pt-6 md:pt-8 lg:pt-12">
               <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-center md:text-left">
                 Reach Out to Us
               </h2>
-
-              {/* Notification Toast */}
-              {notification.show && (
-                <div
-                  className={`mb-4 p-4 rounded-md text-white text-center ${
-                    notification.type === "success"
-                      ? "bg-green-500"
-                      : "bg-red-500"
-                  }`}
-                >
-                  {notification.message}
-                </div>
-              )}
 
               <form
                 ref={formRef}

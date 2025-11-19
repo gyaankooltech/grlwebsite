@@ -16,20 +16,23 @@ import { Footer } from "./Footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const About = () => {
-  const coreValues = ["Integrity", "Innovation", "Impact", "Sustainability"];
-  const coreValues1 = [
-    "Impact",
-    "Sustainability",
+  const coreValues = [
     "Integrity",
     "Innovation",
     "Impact",
+    "Sustainability",
+    "Eco-friendly",
+    "Accountability",
+    "Longevity",
+    "Transparency",
+    "Efficiency",
   ];
 
   const focusAreas = [
     {
-      title: "Education: GetSkilled",
+      title: "Education: Getskilled",
       description:
-        "Through our education vertical, we develop AI-powered learning platforms that make quality education and skill development accessible to everyone. Our flagship initiatives include: GetSkilled – A unified learning platform offering tech and business courses under one subscription. AI-Powered Virtual Tutors for personalized learning and student assessment.",
+        "Through our education vertical, we develop AI-powered learning platforms that make quality education and skill development accessible to everyone. Our flagship initiatives include: Getskilled – A unified learning platform offering tech and business courses under one subscription. AI-Powered Virtual Tutors for personalized learning and student assessment.",
       image: education,
     },
     {
@@ -248,14 +251,13 @@ const [currentIndex, setCurrentIndex] = useState(0);
       <div className="text-gray-800 py-8 sm:py-10 px-4 sm:px-6 md:px-16">
 
         <section className="text-center mb-8 sm:mb-10">
-          <h2 className="text-green-700 font-semibold text-lg sm:text-xl mb-3">
+          <h2 className="text-green-700 font-semibold text-lg sm:text-xl mb-6">
             OUR CORE VALUES
           </h2>
 
-          <div className="relative mb-6 overflow-hidden sm:mx-8 lg:mx-60">
-            <style
-              dangerouslySetInnerHTML={{
-                __html: `
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
           @keyframes marquee-left {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
@@ -271,25 +273,27 @@ const [currentIndex, setCurrentIndex] = useState(0);
             animation: marquee-right 20s linear infinite;
           }
         `,
-              }}
-            />
+            }}
+          />
 
+          {/* First Row - 4 values moving left */}
+          <div className="relative mb-6 overflow-hidden" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
             <div className="flex animate-marquee-left">
               <div className="flex gap-2 sm:gap-3 shrink-0">
-                {[...coreValues, ...coreValues].map((value, index) => (
+                {[...coreValues.slice(0, 4), ...coreValues.slice(0, 4)].map((value, index) => (
                   <span
                     key={index}
-                    className="border border-green-700 text-green-700 px-10 sm:px-6 lg:px-10 py-1.5 sm:py-2 rounded-full text-lg sm:text-base lg:text-xl font-medium whitespace-nowrap"
+                    className="border border-green-700 text-green-700 bg-white px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 rounded-full text-base sm:text-lg lg:text-xl font-medium whitespace-nowrap"
                   >
                     {value}
                   </span>
                 ))}
               </div>
               <div className="flex gap-2 sm:gap-3 shrink-0">
-                {[...coreValues, ...coreValues].map((value, index) => (
+                {[...coreValues.slice(0, 4), ...coreValues.slice(0, 4)].map((value, index) => (
                   <span
                     key={`duplicate-${index}`}
-                    className="border border-green-700 text-green-700 px-4 sm:px-6 lg:px-10 py-1.5 sm:py-2 rounded-full text-sm sm:text-base lg:text-xl font-medium whitespace-nowrap"
+                    className="border border-green-700 text-green-700 bg-white px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 rounded-full text-base sm:text-lg lg:text-xl font-medium whitespace-nowrap"
                   >
                     {value}
                   </span>
@@ -298,23 +302,24 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </div>
           </div>
 
-          <div className="relative overflow-hidden sm:mx-8 lg:mx-40">
-            <div className="flex animate-marquee-right">
+          {/* Second Row - 5 values moving left (from right) */}
+          <div className="relative overflow-hidden" style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+            <div className="flex animate-marquee-left">
               <div className="flex gap-2 sm:gap-3 shrink-0">
-                {[...coreValues1, ...coreValues1].map((value, index) => (
+                {[...coreValues.slice(4, 9), ...coreValues.slice(4, 9)].map((value, index) => (
                   <span
                     key={index}
-                    className="border border-green-700 text-green-700 px-10 sm:px-6 lg:px-10 py-1.5 sm:py-2 rounded-full text-lg sm:text-base lg:text-xl font-medium whitespace-nowrap"
+                    className="border border-green-700 text-green-700 bg-white px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 rounded-full text-base sm:text-lg lg:text-xl font-medium whitespace-nowrap"
                   >
                     {value}
                   </span>
                 ))}
               </div>
               <div className="flex gap-2 sm:gap-3 shrink-0">
-                {[...coreValues1, ...coreValues1].map((value, index) => (
+                {[...coreValues.slice(4, 9), ...coreValues.slice(4, 9)].map((value, index) => (
                   <span
                     key={`duplicate-${index}`}
-                    className="border border-green-700 text-green-700 px-4 sm:px-6 lg:px-10 py-1.5 sm:py-2 rounded-full text-sm sm:text-base lg:text-xl font-medium whitespace-nowrap"
+                    className="border border-green-700 text-green-700 bg-white px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 rounded-full text-base sm:text-lg lg:text-xl font-medium whitespace-nowrap"
                   >
                     {value}
                   </span>

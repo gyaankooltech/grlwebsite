@@ -23,10 +23,10 @@ export const Footer = () => {
                 <h4 className="font-bold mb-3 text-lg sm:text-xl">COMPANY INFO</h4>
                 <p className="text-sm sm:text-lg leading-relaxed">
                   GyaanKool Research Labs Private <br /> Limited <br />
-                  CIN: U62090KA2025PTC204517 <br />
-                  Grievance mail: grievanceatgrl@gmail.com  <br />
+                  <span className="font-bold">CIN:</span> U62090KA2025PTC204517 <br />
+                  <span className="font-bold">Grievance mail:</span> grievanceatgrl@gmail.com  <br />
                   {/* Phone number:+91 97417 18160 <br /> */}
-                  Registered Address: Om Chambers <br />
+                  <span className="font-bold">Registered Address:</span> Om Chambers <br />
                   Binnamangala, Stage 1, Indiranagar, <br />
                   Bengaluru, Karnataka 560038
                 </p>
@@ -49,7 +49,7 @@ export const Footer = () => {
                 <p className="text-sm sm:text-lg leading-relaxed">
                   <a className='cursor-pointer' href="/">Home</a>  <br />
    <a className='cursor-pointer' href="/about">About</a>  <br />
-   <a className='cursor-pointer' href="/solutions">Solutions</a>  <br />
+   <a className='cursor-pointer' href="/solutions">Products</a>  <br />
    <a className='cursor-pointer' href="/contact">Contact</a> 
                 </p>
               </div>
@@ -59,8 +59,7 @@ export const Footer = () => {
                 <p className="text-sm sm:text-lg leading-relaxed">
                    Terms and Condition <br />
     Privacy Policy <br />
-    Financial Reports <br />
-    Partner with us : <a className='cursor-pointer' href="https://forms.gle/MQsVsD5ewFTfvwZW8 ">https://forms.gle/MQsVsD5ewFTfvwZW8 </a>
+    Financial Reports
                 </p>
               </div>
             </footer>

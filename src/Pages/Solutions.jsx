@@ -195,23 +195,23 @@ const Solutions = () => {
           </p>
         </section>
 
-        {/* GetSkilled */}
+        {/* Getskilled */}
         <section className="text-center py-10 sm:py-12 px-6 md:px-20">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black">
-            GETSKILLED: Learn, Upskill & Grow
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6">
+            Getskilled:<br />Learn, Upskill & Grow
           </h2>
-          <p className="max-w-5xl mx-auto text-base sm:text-lg leading-relaxed tracking-wider text-green-700 px-4">
-            GetSkilled is our all-in-one learning and career advancement
+          <p className="max-w-5xl mx-auto text-base sm:text-lg leading-relaxed tracking-wider text-black-700 px-4">
+            Getskilled is our all-in-one learning and career advancement
             platform designed to make education practical, affordable, and
-            career-focused. Whether you’re a student, graduate, or working
-            professional, GetSkilled helps you learn in-demand skills, build
+            career-focused. Whether you're a student, graduate, or working
+            professional, Getskilled helps you learn in-demand skills, build
             real-world projects, and get job-ready.
           </p>
         </section>
       </div>
 
       <div className="w-full my-8 sm:my-10 ">
-        {/* GetSkilled Highlights */}
+        {/* Getskilled Highlights */}
         <div className="relative w-full h-[750px] sm:h-[450px] md:h-[500px] my-8 sm:my-10">
           {/* Mobile Wave */}
           <img
@@ -253,40 +253,21 @@ const Solutions = () => {
         </div>
 
         {/* Agrisol Section */}
-        <section className="px-4 sm:px-6 md:px-20 py-8 sm:py-10">
-          <h2 className="text-xl sm:text-3xl font-semibold text-center mb-6 sm:mb-8 ">
-            Agrisol <br />
-            Nutrition for every age, naturally
+        <section className="text-center py-10 sm:py-12 px-6 md:px-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6">
+            Agrisol:<br />Nutrition for every age, naturally
           </h2>
-          <div className="flex flex-col gap-8 sm:gap-12">
-            <div className="flex flex-col md:flex-row items-center rounded-xl">
-              {/* Image */}
-              {/* <div className ="flex-shrink-0 w-full md:w-auto mb-6 md:mb-0">
-                <img
-                  src={nutrition}
-                  alt="Agrisol Nutrition"
-                  className="rounded-lg w-full md:w-80 lg:w-96 h-auto md:h-80 lg:h-96 object-cover"
-                />
-              </div> */}
-              {/* Text */}
-              <div className="text-lg sm:text-xl leading-relaxed  p-4 sm:p-6">
-                <p className="tracking-wider text-base sm:text-xl text-green-700 [word-spacing:0.25em]">
-                  Agrisol (a product of GyaanKool Research Labs), the AgriTech
-                  and Nutritional Science Product of GyaanKool Research Labs, is
-                  redefining how food is grown and consumed. Our vision is to
-                  make India’s agriculture more intelligent, sustainable, and
-                  nutrition-focused.
-                  <br />
-                  <br />
-                  Agrisol products are powered by nutrient-rich crops grown
-                  using AI-powered farming devices developed by GyaanKool
-                  Research Labs. These crops directly target India’s key
-                  nutritional deficiencies, helping communities achieve better
-                  health through food-based solutions.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="max-w-5xl mx-auto text-base sm:text-lg leading-relaxed tracking-wider text-black-700 px-4">
+            Agrisol (a product of GyaanKool Research Labs), the AgriTech
+            and Nutritional Science Product of GyaanKool Research Labs, is
+            redefining how food is grown and consumed. Our vision is to
+            make India's agriculture more intelligent, sustainable, and
+            nutrition-focused. Agrisol products are powered by nutrient-rich crops grown
+            using AI-powered farming devices developed by GyaanKool
+            Research Labs. These crops directly target India's key
+            nutritional deficiencies, helping communities achieve better
+            health through food-based solutions.
+          </p>
         </section>
 
         {/* Agrisol Unique */}
@@ -331,20 +312,18 @@ const Solutions = () => {
         </div>
 
         {/* Healthcare */}
-        <div className=" text-center py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-          <h3 className="text-green-700 font-semibold text-xl sm:text-2xl mb-4">
-            Aarogyam
-            <br className="sm:hidden" />
-            AI for Preventive & Personalized Care
-          </h3>
-          <p className="text-green-700 max-w-5xl mx-auto text-sm sm:text-base md:text-lg tracking-wider leading-relaxed px-4">
+        <section className="text-center py-10 sm:py-12 px-6 md:px-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6">
+            Aarogyam:<br />AI for Preventive & Personalized Care
+          </h2>
+          <p className="max-w-5xl mx-auto text-base sm:text-lg leading-relaxed tracking-wider text-black-700 px-4">
             At GyaanKool (a product of GyaanKool Research Labs), our Healthcare
             division focuses on using AI for early diagnosis, preventive care,
             and disease reversal. We believe that technology should not just
             treat diseases but help prevent and reverse them — improving quality
             of life.
           </p>
-        </div>
+        </section>
       </div>
 
       {/* Agrisol Unique */}

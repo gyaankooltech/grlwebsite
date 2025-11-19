@@ -2,9 +2,9 @@ import home from "../assets/image1.png";
 import home1 from "../assets/image2.png";
 import home2 from "../assets/home2.png";
 import home3 from "../assets/home3.png";
-import agriculture from "../assets/agriculture.png";
-import health from "../assets/health.png";
-import education from "../assets/education.png";
+import agriculture from "../assets/agri-home.svg";
+import health from "../assets/health-home.svg";
+import education from "../assets/edu-home.svg";
 import partner from "../assets/partner.png";
 import wave from "../assets/wave.png";
 import wave2 from "../assets/wave2.png";
@@ -59,12 +59,12 @@ export default function HomePage() {
 
           {/* Buttons - Order 4 on mobile */}
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 pt-2 order-4">
-            <button className="bg-[#168A41] hover:bg-green-700 text-white font-medium px-6 py-2.5 rounded-full transition w-full sm:w-auto">
+            <a href="/solutions" className="bg-[#168A41] hover:bg-green-700 text-white font-medium px-6 py-2.5 rounded-full transition w-full sm:w-auto text-center">
               Explore Our Innovations
-            </button>
-            <button className="border border-green-600 text-green-700 hover:bg-green-50 font-medium px-6 py-2.5 rounded-full transition w-full sm:w-auto">
+            </a>
+            <a href="https://forms.gle/MQsVsD5ewFTfvwZW8" target="_blank" rel="noopener noreferrer" className="border border-green-600 text-green-700 hover:bg-green-50 font-medium px-6 py-2.5 rounded-full transition w-full sm:w-auto text-center">
               Partner With Us
-            </button>
+            </a>
           </div>
         </div>
 
@@ -115,19 +115,25 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Education Card */}
-          <div className="relative  overflow-hidden rounded-xl group cursor-pointer  ">
+          <div className="relative overflow-hidden rounded-xl group cursor-pointer aspect-square">
             <img
               src={education}
               alt="Education"
-              className="w-[550px] h-[550px] object-cover transition-all duration-300 group-hover:brightness-50"
+              className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50"
             />
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-14 ">
-              <h3 className="text-white font-bold text-2xl mb-10">Education</h3>
-              <p className="text-white text-lg leading-relaxed max-w-2xl mx-auto">
+            {/* Title - Hidden on hover */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+              <h3 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl text-center px-4 drop-shadow-lg">
+                Education: GetSkilled
+              </h3>
+            </div>
+            {/* Description - Visible on hover */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden">
+              <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed text-center max-w-full px-2 overflow-y-auto">
                 We are transforming the way India learns through AI-powered
                 learning platforms, affordable upskilling programs, and virtual
                 tutors for K–12, college, and professionals. Our brands like
-                GetSkilled,bring project-based learning, AI tutoring, and
+                GetSkilled bring project-based learning, AI tutoring, and
                 career-focused courses making education practical, affordable,
                 and accessible to all.
               </p>
@@ -135,18 +141,22 @@ export default function HomePage() {
           </div>
 
           {/* Healthcare Card */}
-          <div className="hidden sm:block relative overflow-hidden rounded-xl group cursor-pointer">
+          <div className="hidden sm:block relative overflow-hidden rounded-xl group cursor-pointer aspect-square">
             <img
               src={health}
               alt="Healthcare"
               className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50"
             />
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-14">
-              <h3 className="text-white font-bold text-2xl mb-10">
-                Aarogyam
+            {/* Title - Hidden on hover */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+              <h3 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl text-center px-4 drop-shadow-lg">
+                Healthcare: Aarogyam
               </h3>
-              <p className="text-white text-lg leading-relaxed">
-                We’re developing AI-based diagnostic systems, health monitoring
+            </div>
+            {/* Description - Visible on hover */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden">
+              <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed text-center max-w-full px-2 overflow-y-auto">
+                We're developing AI-based diagnostic systems, health monitoring
                 tools. Our mission is to make healthcare diagnosis accessible
                 across India and beyond. From AI anomaly detection systems to
                 remote patient monitoring, we bring cutting-edge technology to
@@ -156,15 +166,21 @@ export default function HomePage() {
           </div>
 
           {/* Agriculture Card */}
-          <div className="hidden sm:block relative overflow-hidden rounded-xl group cursor-pointer">
+          <div className="hidden sm:block relative overflow-hidden rounded-xl group cursor-pointer aspect-square">
             <img
               src={agriculture}
               alt="Agriculture"
               className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-50"
             />
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-14">
-              <h3 className="text-white font-bold text-2xl mb-10">Agrisol</h3>
-              <p className="text-white text-lg leading-relaxed">
+            {/* Title - Hidden on hover */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+              <h3 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl text-center px-4 drop-shadow-lg">
+                Agriculture: Agrisol
+              </h3>
+            </div>
+            {/* Description - Visible on hover */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden">
+              <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed text-center max-w-full px-2 overflow-y-auto">
                 At Agrisol, a division of GyaanKool Research Labs Pvt. Ltd., we
                 believe that the journey from farm to health must be
                 intelligent, sustainable, and nourishing. Our mission is to
@@ -218,9 +234,9 @@ export default function HomePage() {
                   government organizations to create impactful AI-based
                   solutions.
                 </p>
-                <button className="bg-white text-green-700 font-medium px-6 py-2.5 rounded-full hover:bg-green-50 transition mt-4">
+                <a href="https://forms.gle/MQsVsD5ewFTfvwZW8" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-green-700 font-medium px-6 py-2.5 rounded-full hover:bg-green-50 transition mt-4">
                   Partner With Us
-                </button>
+                </a>
               </div>
 
               <div className="md:w-1/3  justify-center hidden sm:block">
@@ -248,12 +264,12 @@ export default function HomePage() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="hidden sm:block bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-2.5 rounded-full w-full sm:w-auto">
+          <a href="/solutions" className="hidden sm:block bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-2.5 rounded-full w-full sm:w-auto text-center">
             Explore Our Innovations
-          </button>
-          <button className="border border-green-600 text-green-700 hover:bg-green-50 font-medium px-6 py-2.5 rounded-full w-full sm:w-auto">
+          </a>
+          <a href="https://forms.gle/MQsVsD5ewFTfvwZW8" target="_blank" rel="noopener noreferrer" className="border border-green-600 text-green-700 hover:bg-green-50 font-medium px-6 py-2.5 rounded-full w-full sm:w-auto text-center">
             Partner With Us
-          </button>
+          </a>
         </div>
       </section>
 
