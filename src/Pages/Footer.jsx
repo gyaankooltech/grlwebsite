@@ -26,9 +26,9 @@ export const Footer = () => {
                   <span className="font-bold">CIN:</span> U62090KA2025PTC204517 <br />
                   <span className="font-bold">Grievance mail:</span> grievanceatgrl@gmail.com  <br />
                   {/* Phone number:+91 97417 18160 <br /> */}
-                  <span className="font-bold">Registered Address:</span> Om Chambers <br />
-                  Binnamangala, Stage 1, Indiranagar, <br />
-                  Bengaluru, Karnataka 560038
+                  <span className="font-bold">Registered Address:</span> Om Chambers Binnamangala, Stage 1, Indiranagar, <br />
+                  Bengaluru, Karnataka 560038 <br />
+                  
                 </p>
               </div>
     
