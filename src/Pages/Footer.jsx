@@ -10,7 +10,7 @@ export const Footer = () => {
         src={wave2} 
         alt="Wave background" 
         className="w-full h-[900px] md:hidden" 
-      />
+      /> 
       
       {/* Desktop Wave Image */}
       <img 
