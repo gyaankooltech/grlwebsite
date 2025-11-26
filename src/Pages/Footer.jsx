@@ -55,7 +55,7 @@ export const Footer = () => {
     
               <div>
                 <h4 className="font-bold mb-3 text-lg sm:text-xl">LEGAL</h4>
-               <a href =" https://drive.google.com/file/d/1cUFPuouxZKNqV0m5F7JE7HlV2NJWu8XQ/view?usp=sharing" <p className="text-sm sm:text-lg leading-relaxed">
+               <a href =" https://drive.google.com/file/d/1cUFPuouxZKNqV0m5F7JE7HlV2NJWu8XQ/view?usp=sharing"> <p className="text-sm sm:text-lg leading-relaxed">
                    Terms and Condition <br /> </a>
     <a href ="https://drive.google.com/file/d/1qwxFlMVbLkdfrGeVFeBEhoUmIJ6CF7Gy/view?usp=sharing">Privacy Policy</a> <br />
    <a href="https://forms.gle/x7nHm7DCw6de6YH6A"> Financial Reports </a>
