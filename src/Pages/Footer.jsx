@@ -22,7 +22,7 @@ export const Footer = () => {
               <div>
                 <h4 className="font-bold mb-3 text-lg sm:text-xl">COMPANY INFO</h4>
                 <p className="text-sm sm:text-lg leading-relaxed">
-                  GyaanKool Research Labs Private <br /> 
+                  GyaanKool Research Labs Private Limited <br /> 
                   <span className="font-bold">CIN:</span> U62090KA2025PTC204517 <br />
                   <span className="font-bold">Grievance mail:</span> grievanceatgrl@gmail.com  <br />
                   <span className="font-bold">  Registered Address:</span> Om Chambers Binnamangala, Stage 1, Indiranagar,
